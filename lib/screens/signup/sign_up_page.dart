@@ -1,8 +1,9 @@
+import 'package:datingapp/screens/signup/phone_number_page.dart';
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
-import '../theme/app_text_styles.dart';
-import '../widgets/primary_button.dart';
-import '../widgets/social_icon_button.dart';
+import '../../theme/app_colors.dart';
+import '../../theme/app_text_styles.dart';
+import '../../widgets/primary_button.dart';
+import '../../widgets/social_icon_button.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -78,7 +79,12 @@ class SignUpPage extends StatelessWidget {
                           label: 'Use phone number',
                           labelSize: 16,
                           onPressed: () {
-                            // implement phone number flow
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const PhoneNumberPage(),
+                              ),
+                            );
                           },
                           variant: PrimaryButtonVariant.outlined,
                           height: 64 * scale,
