@@ -32,14 +32,14 @@ class SignUpPage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 28),
                     child: Column(
                       children: [
-                        const SizedBox(height: 28),
+                        const SizedBox(height: 70),
 
                         // Logo
                         SizedBox(
                           height: 120 * scale,
                           child: Center(
                             child: Image.asset(
-                              'assets/images/logo.png',
+                              'assets/images/dating_app_icon.png',
                               fit: BoxFit.contain,
                               height: 120 * scale,
                               semanticLabel: 'App logo',
@@ -47,12 +47,13 @@ class SignUpPage extends StatelessWidget {
                           ),
                         ),
 
-                        const SizedBox(height: 24),
+                        const SizedBox(height: 44),
 
                         // Title
                         Text(
                           'Sign up to continue',
-                          style: AppTextStyles.title(20 * scale),
+
+                          style: AppTextStyles.title(18 * scale),
                           textAlign: TextAlign.center,
                         ),
 
@@ -61,12 +62,13 @@ class SignUpPage extends StatelessWidget {
                         // Primary button - filled
                         PrimaryButton(
                           label: 'Continue with email',
+                          labelSize: 16,
                           onPressed: () {
                             // implement navigation to email flow
                           },
                           variant: PrimaryButtonVariant.filled,
                           height: 64 * scale,
-                          borderRadius: 24,
+                          borderRadius: 15,
                         ),
 
                         const SizedBox(height: 18),
@@ -74,6 +76,7 @@ class SignUpPage extends StatelessWidget {
                         // Secondary button - outlined
                         PrimaryButton(
                           label: 'Use phone number',
+                          labelSize: 16,
                           onPressed: () {
                             // implement phone number flow
                           },
@@ -82,7 +85,7 @@ class SignUpPage extends StatelessWidget {
                           borderRadius: 24,
                         ),
 
-                        const SizedBox(height: 36),
+                        const SizedBox(height: 86),
 
                         // Or divider
                         Row(
@@ -92,7 +95,10 @@ class SignUpPage extends StatelessWidget {
                               padding: EdgeInsets.symmetric(horizontal: 12.0),
                               child: Text(
                                 'or sign up with',
-                                style: TextStyle(color: Color(0xFF9A9A9A)),
+                                style: TextStyle(
+                                  color: Color(0xFF9A9A9A),
+                                  fontSize: 12,
+                                ),
                               ),
                             ),
                             Expanded(child: Divider(color: AppColors.border)),
@@ -106,17 +112,17 @@ class SignUpPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             SocialIconButton(
-                              assetPath: 'assets/images/social_facebook.png',
+                              assetPath: 'assets/images/facebook_50.png',
                               size: 72,
                               onTap: () {},
                             ),
                             SocialIconButton(
-                              assetPath: 'assets/images/social_google.png',
+                              assetPath: 'assets/images/google_50.png',
                               size: 72,
                               onTap: () {},
                             ),
                             SocialIconButton(
-                              assetPath: 'assets/images/social_apple.png',
+                              assetPath: 'assets/images/apple_inc_50.png',
                               size: 72,
                               onTap: () {},
                             ),
@@ -135,14 +141,14 @@ class SignUpPage extends StatelessWidget {
                                 onTap: () {},
                                 child: Text(
                                   'Terms of use',
-                                  style: AppTextStyles.footerLink,
+                                  style: AppTextStyles.footerLink(14 * scale),
                                 ),
                               ),
                               GestureDetector(
                                 onTap: () {},
                                 child: Text(
                                   'Privacy Policy',
-                                  style: AppTextStyles.footerLink,
+                                  style: AppTextStyles.footerLink(14 * scale),
                                 ),
                               ),
                             ],

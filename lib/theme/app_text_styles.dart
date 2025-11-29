@@ -37,8 +37,8 @@ class AppTextStyles {
     color: Colors.white,
   );
 
-  static const TextStyle footerLink = TextStyle(
-    fontSize: 14,
+  static TextStyle footerLink(double size) => TextStyle(
+    fontSize: size,
     fontWeight: FontWeight.w500,
     color: AppColors.primary,
   );

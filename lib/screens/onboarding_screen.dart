@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../onboarding_data_model.dart'; // leave your model file as-is
+import 'onboarding_data_model.dart'; // leave your model file as-is
 import '../widgets/primary_button.dart';
 import '../widgets/dot_indicator.dart';
 import '../widgets/onboarding_card.dart';
@@ -131,7 +131,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               // PageView (top area)
               SizedBox(
-                height: media.height * 0.62,
+                height: media.height * 0.5,
                 child: PageView.builder(
                   controller: _pageController,
                   itemCount: _pages.length,

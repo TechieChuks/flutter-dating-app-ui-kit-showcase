@@ -10,10 +10,12 @@ class PrimaryButton extends StatelessWidget {
   final bool loading;
   final double height;
   final double borderRadius;
+  final double labelSize;
 
   const PrimaryButton({
     Key? key,
     required this.label,
+    this.labelSize = 18,
     required this.onPressed,
     this.variant = PrimaryButtonVariant.filled,
     this.loading = false,
@@ -27,7 +29,7 @@ class PrimaryButton extends StatelessWidget {
     final Color backgroundColor = isOutlined ? Colors.white : AppColors.primary;
     final Color borderColor = isOutlined ? AppColors.border : AppColors.primary;
     final Color textColor = isOutlined ? AppColors.primary : Colors.white;
-
+    double fontsize = labelSize;
     return Semantics(
       button: true,
       label: label,
@@ -55,7 +57,7 @@ class PrimaryButton extends StatelessWidget {
                   label,
                   style: TextStyle(
                     color: textColor,
-                    fontSize: 18,
+                    fontSize: fontsize,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
