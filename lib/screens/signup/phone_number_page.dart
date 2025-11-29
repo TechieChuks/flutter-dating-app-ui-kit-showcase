@@ -1,3 +1,4 @@
+import 'package:datingapp/screens/otp/otp_page.dart';
 import 'package:datingapp/widgets/phone_input.dart';
 import 'package:datingapp/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
@@ -103,6 +104,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
 
   void _onContinue() {
     debugPrint("Phone Entered: ${_dialCode} ${_phoneController.text}");
+    Navigator.push(context, MaterialPageRoute(builder: (_) => const OtpPage()));
   }
 
   @override
