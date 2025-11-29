@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       // inside MaterialApp.routes or push manually
       routes: {
         '/otp': (_) => const OtpPage(),
-        '/nextPage': (_) => const ProfilePage(),
+        '/nextPage': (_) => const ProfileScreen(),
       },
       title: 'Dating App',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
