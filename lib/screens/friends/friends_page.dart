@@ -1,3 +1,4 @@
+import 'package:datingapp/screens/notification/notification_screen.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/primary_button.dart';
 import '../../theme/app_colors.dart';
@@ -105,9 +106,7 @@ class FriendsScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 8 * scale),
                     child: Text(
                       "You can find friends from your contact lists to connected",
-                      style: AppTextStyles.description.copyWith(
-                        fontSize: 16 * scale,
-                      ),
+                      style: AppTextStyles.description(16 * scale),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -131,10 +130,11 @@ class FriendsScreen extends StatelessWidget {
                           // 1) show rationale / explain
                           // 2) request permission via permission_handler plugin
                           // 3) if allowed, fetch contacts or navigate onward
-                          // For now just show a snackbar (replace with real code).
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('Access contacts tapped'),
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => NotificationScreen(),
                             ),
                           );
                         },

@@ -23,8 +23,8 @@ class AppTextStyles {
     height: 1.45,
   );
 
-  static const TextStyle description = TextStyle(
-    fontSize: 16,
+  static TextStyle description(double size) => TextStyle(
+    fontSize: size,
     fontWeight: FontWeight.w400,
     color: AppColors.textMuted,
     height: 1.5,

@@ -117,9 +117,7 @@ class _InterestsPageState extends State<InterestsPage> {
                   const SizedBox(height: 12),
                   Text(
                     "Select a few of your interests and let everyone know what you’re passionate about.",
-                    style: AppTextStyles.description.copyWith(
-                      fontSize: (14 * scale),
-                    ),
+                    style: AppTextStyles.description((14 * scale)),
                   ),
 
                   const SizedBox(height: 22),
