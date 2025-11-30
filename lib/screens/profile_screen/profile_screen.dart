@@ -1,4 +1,4 @@
-import 'package:datingapp/screens/gender_screen.dart';
+import 'package:datingapp/screens/gender_screen/gender_screen.dart';
 import 'package:datingapp/screens/profile_screen/birth_day_picker_sheet.dart';
 import 'package:datingapp/theme/app_colors.dart';
 import 'package:datingapp/theme/app_text_styles.dart';

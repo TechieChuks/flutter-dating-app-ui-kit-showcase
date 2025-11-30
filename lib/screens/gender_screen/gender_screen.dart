@@ -1,3 +1,5 @@
+import 'package:datingapp/screens/interest_screen/interests_page.dart';
+//import 'package:datingapp/screens/test_screen.dart';
 import 'package:datingapp/widgets/gender_tile_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +36,10 @@ class _GenderScreenState extends State<GenderScreen> {
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(color: Colors.black12),
                     ),
-                    child: const Icon(Icons.arrow_back, color: Colors.red),
+                    child: InkWell(
+                      onTap: () => Navigator.maybePop(context),
+                      child: const Icon(Icons.arrow_back, color: Colors.red),
+                    ),
                   ),
                   const Text(
                     "Skip",
@@ -77,7 +82,7 @@ class _GenderScreenState extends State<GenderScreen> {
                   // Go to Custom Gender Screen
                 },
                 child: Container(
-                  height: 75,
+                  height: 58,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black12),
                     borderRadius: BorderRadius.circular(18),
@@ -105,11 +110,13 @@ class _GenderScreenState extends State<GenderScreen> {
                 onTap: () {
                   print("Selected: $selectedGender");
 
-                  // Navigate to next screen
-                  // Example: Interests screen / Orientation / etc.
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => InterestsPage()),
+                  );
                 },
                 child: Container(
-                  height: 64,
+                  height: 56,
                   decoration: BoxDecoration(
                     color: const Color(0xFFE83F5F),
                     borderRadius: BorderRadius.circular(20),

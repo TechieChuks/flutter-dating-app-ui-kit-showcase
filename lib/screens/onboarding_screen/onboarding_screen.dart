@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'onboarding_data_model.dart'; // leave your model file as-is
-import '../widgets/primary_button.dart';
-import '../widgets/dot_indicator.dart';
-import '../widgets/onboarding_card.dart';
-import '../theme/app_text_styles.dart';
-import '../theme/app_colors.dart';
-import 'signup/sign_up_page.dart';
+import '../../widgets/primary_button.dart';
+import '../../widgets/dot_indicator.dart';
+import '../../widgets/onboarding_card.dart';
+import '../../theme/app_text_styles.dart';
+import '../../theme/app_colors.dart';
+import '../signup/sign_up_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key, required this.title});

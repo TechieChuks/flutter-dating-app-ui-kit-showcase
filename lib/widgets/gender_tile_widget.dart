@@ -22,7 +22,7 @@ class GenderTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 75,
+        height: 58,
         decoration: BoxDecoration(
           color: background,
           borderRadius: BorderRadius.circular(18),

@@ -1,4 +1,5 @@
-import 'package:datingapp/screens/onboarding_screen.dart';
+import 'package:datingapp/screens/friends/friends_page.dart';
+import 'package:datingapp/screens/onboarding_screen/onboarding_screen.dart';
 import 'package:datingapp/screens/otp/otp_page.dart';
 import 'package:datingapp/screens/profile_screen/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/otp': (_) => const OtpPage(),
         '/nextPage': (_) => const ProfileScreen(),
+        '/friends': (_) => const FriendsScreen(),
       },
       title: 'Dating App',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
