@@ -78,7 +78,7 @@ class FriendsScreen extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(24),
                           child: Image.asset(
-                            'assets/images/friends_hero.png',
+                            'assets/images/people.png',
                             fit: BoxFit.contain,
                             width: heroHeight,
                             height: heroHeight,
