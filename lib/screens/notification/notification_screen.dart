@@ -1,3 +1,4 @@
+import 'package:datingapp/screens/home_screen/home_screen_main.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/primary_button.dart';
 import '../../theme/app_text_styles.dart';
@@ -11,7 +12,10 @@ class NotificationScreen extends StatelessWidget {
   }
 
   void _onEnableNotifications(BuildContext context) {
-    // implement real notification permission here
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
+    );
   }
 
   @override
