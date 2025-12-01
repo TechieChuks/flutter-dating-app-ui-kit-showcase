@@ -88,13 +88,12 @@ class _SwipeCardState extends State<SwipeCard>
   void handlePanEnd(DragEndDetails details) {
     if (!widget.isTop) return;
     final screenWidth = MediaQuery.of(context).size.width;
-    // thresholds
-    const fullSwipeThreshold = 0.28; // fraction of screen
-    final dx = position.dx;
-    //final frac = dx.abs() / screenWidth;
 
+    const fullSwipeThreshold = 0.28;
+    final dx = position.dx;
+
+    // FULL LEFT SWIPE
     if (dx <= -screenWidth * fullSwipeThreshold) {
-      // full left swipe -> move to left offscreen then notify parent (but NOT delete)
       animateTo(
         Offset(-screenWidth * 1.5, position.dy),
         then: () {
@@ -109,8 +108,8 @@ class _SwipeCardState extends State<SwipeCard>
       return;
     }
 
+    // FULL RIGHT SWIPE
     if (dx >= screenWidth * fullSwipeThreshold) {
-      // full right swipe -> move right offscreen then notify parent (open details)
       animateTo(
         Offset(screenWidth * 1.5, position.dy),
         then: () {
@@ -125,7 +124,16 @@ class _SwipeCardState extends State<SwipeCard>
       return;
     }
 
-    // otherwise snap back
+    // ⭐ NEW: Park card when partially swiped left so cancel button stays visible
+    if (dx < -35) {
+      setState(() {
+        position = Offset(-70, position.dy); // parked position
+        showCancel = true;
+      });
+      return;
+    }
+
+    // NORMAL SNAP BACK
     animateTo(
       Offset.zero,
       then: () {
