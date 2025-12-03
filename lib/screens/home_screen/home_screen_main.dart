@@ -1,5 +1,6 @@
+import 'package:datingapp/screens/favourites_match_Screen/favourite_match_screen.dart';
 import 'package:datingapp/screens/filter_screen/filter_screen.dart';
-import 'package:datingapp/screens/home_screen/favourites_screen.dart';
+
 import 'package:datingapp/screens/home_screen/messages_screen.dart';
 import 'package:datingapp/screens/home_screen/model/user_card_model.dart';
 import 'package:datingapp/screens/home_screen/profile_screen.dart';
@@ -209,7 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         );
       case 1:
-        return const FavoritesScreen();
+        return const FavMatchesScreen();
       case 2:
         return const MessagesScreen();
       case 3:
