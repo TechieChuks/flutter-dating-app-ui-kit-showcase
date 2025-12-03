@@ -1,7 +1,7 @@
 import 'package:datingapp/screens/favourites_match_Screen/favourite_match_screen.dart';
+import 'package:datingapp/screens/favourites_match_Screen/messges_screen/messages_screen.dart';
 import 'package:datingapp/screens/filter_screen/filter_screen.dart';
 
-import 'package:datingapp/screens/home_screen/messages_screen.dart';
 import 'package:datingapp/screens/home_screen/model/user_card_model.dart';
 import 'package:datingapp/screens/home_screen/profile_screen.dart';
 import 'package:datingapp/screens/matchscreen/matchscreen.dart';
