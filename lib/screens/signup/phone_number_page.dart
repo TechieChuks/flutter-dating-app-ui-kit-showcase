@@ -103,7 +103,7 @@ class _PhoneNumberPageState extends State<PhoneNumberPage> {
   }
 
   void _onContinue() {
-    debugPrint("Phone Entered: ${_dialCode} ${_phoneController.text}");
+    debugPrint("Phone Entered: $_dialCode ${_phoneController.text}");
     Navigator.push(context, MaterialPageRoute(builder: (_) => const OtpPage()));
   }
 

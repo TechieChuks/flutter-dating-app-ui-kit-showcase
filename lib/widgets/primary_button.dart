@@ -13,7 +13,7 @@ class PrimaryButton extends StatelessWidget {
   final double labelSize;
 
   const PrimaryButton({
-    Key? key,
+    super.key,
     required this.label,
     this.labelSize = 18,
     required this.onPressed,
@@ -21,7 +21,7 @@ class PrimaryButton extends StatelessWidget {
     this.loading = false,
     this.height = 64,
     this.borderRadius = 22,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

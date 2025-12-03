@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class ViewCardDetailScreen extends StatelessWidget {
   final UserCardModel card;
-  const ViewCardDetailScreen({Key? key, required this.card}) : super(key: key);
+  const ViewCardDetailScreen({super.key, required this.card});
 
   @override
   Widget build(BuildContext context) {

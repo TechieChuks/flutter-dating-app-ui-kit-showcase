@@ -5,7 +5,7 @@ import '../../theme/app_colors.dart';
 import '../../theme/app_text_styles.dart';
 
 class FriendsScreen extends StatelessWidget {
-  const FriendsScreen({Key? key}) : super(key: key);
+  const FriendsScreen({super.key});
 
   // If you use this screen as Stateful later (permission state), convert to StatefulWidget.
   @override

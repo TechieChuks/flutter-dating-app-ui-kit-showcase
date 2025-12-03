@@ -5,7 +5,7 @@ import '../../theme/app_text_styles.dart';
 import '../../theme/app_colors.dart';
 
 class NotificationScreen extends StatelessWidget {
-  const NotificationScreen({Key? key}) : super(key: key);
+  const NotificationScreen({super.key});
 
   void _onSkip(BuildContext context) {
     Navigator.of(context).pop();

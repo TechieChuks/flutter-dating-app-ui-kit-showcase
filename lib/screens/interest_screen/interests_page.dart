@@ -6,7 +6,7 @@ import '../../theme/app_text_styles.dart';
 import '../../theme/app_colors.dart';
 
 class InterestsPage extends StatefulWidget {
-  const InterestsPage({Key? key}) : super(key: key);
+  const InterestsPage({super.key});
 
   @override
   State<InterestsPage> createState() => _InterestsPageState();
@@ -36,10 +36,11 @@ class _InterestsPageState extends State<InterestsPage> {
 
   void _toggle(String label) {
     setState(() {
-      if (_selected.contains(label))
+      if (_selected.contains(label)) {
         _selected.remove(label);
-      else
+      } else {
         _selected.add(label);
+      }
     });
   }
 

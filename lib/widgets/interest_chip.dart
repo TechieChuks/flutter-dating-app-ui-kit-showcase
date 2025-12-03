@@ -10,14 +10,14 @@ class InterestChip extends StatelessWidget {
   final double borderRadius;
 
   const InterestChip({
-    Key? key,
+    super.key,
     required this.label,
     required this.icon,
     this.selected = false,
     this.onTap,
     this.height = 45,
     this.borderRadius = 16,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

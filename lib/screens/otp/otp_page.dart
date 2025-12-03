@@ -10,11 +10,11 @@ class OtpPage extends StatefulWidget {
   final void Function(String code)? onCompleted;
 
   const OtpPage({
-    Key? key,
+    super.key,
     this.length = 4,
     this.countdown = const Duration(seconds: 60),
     this.onCompleted,
-  }) : super(key: key);
+  });
 
   @override
   State<OtpPage> createState() => _OtpPageState();

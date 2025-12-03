@@ -7,12 +7,12 @@ class CircleActionButton extends StatelessWidget {
   final double elevation;
 
   const CircleActionButton({
-    Key? key,
+    super.key,
     required this.child,
     this.size = 84,
     this.onTap,
     this.elevation = 12,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return Material(

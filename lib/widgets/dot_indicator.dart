@@ -9,13 +9,13 @@ class DotIndicator extends StatelessWidget {
   final double spacing;
 
   const DotIndicator({
-    Key? key,
+    super.key,
     required this.count,
     required this.currentIndex,
     this.activeWidth = 14,
     this.dotSize = 8,
     this.spacing = 6,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

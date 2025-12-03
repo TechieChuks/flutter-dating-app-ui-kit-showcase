@@ -16,13 +16,13 @@ class SwipeCard extends StatefulWidget {
   final double maxRotation; // degrees
 
   const SwipeCard({
-    Key? key,
+    super.key,
     required this.card,
     required this.isTop,
     required this.onSwiped,
     required this.onCancelTapped,
     this.maxRotation = 12,
-  }) : super(key: key);
+  });
 
   @override
   State<SwipeCard> createState() => _SwipeCardState();

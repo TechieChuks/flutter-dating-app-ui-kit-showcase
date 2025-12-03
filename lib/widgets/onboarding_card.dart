@@ -7,11 +7,11 @@ class OnboardingCard extends StatelessWidget {
   final double cornerRadius;
 
   const OnboardingCard({
-    Key? key,
+    super.key,
     required this.data,
     this.scale = 1.0,
     this.cornerRadius = 20,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

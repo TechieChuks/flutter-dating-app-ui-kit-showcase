@@ -7,12 +7,12 @@ class SocialIconButton extends StatelessWidget {
   final double radius;
 
   const SocialIconButton({
-    Key? key,
+    super.key,
     required this.assetPath,
     this.onTap,
     this.size = 72,
     this.radius = 16,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

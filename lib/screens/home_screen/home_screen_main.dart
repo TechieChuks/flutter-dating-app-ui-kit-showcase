@@ -1,7 +1,9 @@
+import 'package:datingapp/screens/filter_screen/filter_screen.dart';
 import 'package:datingapp/screens/home_screen/favourites_screen.dart';
 import 'package:datingapp/screens/home_screen/messages_screen.dart';
 import 'package:datingapp/screens/home_screen/model/user_card_model.dart';
 import 'package:datingapp/screens/home_screen/profile_screen.dart';
+import 'package:datingapp/screens/matchscreen/matchscreen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -11,7 +13,7 @@ import '../../theme/app_colors.dart';
 import '../../theme/app_text_styles.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -129,13 +131,50 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const SizedBox(height: 12),
               Center(
-                child: Column(
+                child: Row(
+                  //crossAxisAlignment: CrossAxisAlignment.baseline,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text('Discover', style: AppTextStyles.title(28)),
-                    const SizedBox(height: 4),
-                    const Text(
-                      'Chicago, Il',
-                      style: TextStyle(color: Colors.black54),
+                    Container(
+                      width: 58,
+                      height: 58,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.black12),
+                      ),
+                      child: InkWell(
+                        onTap: () => Navigator.maybePop(context),
+                        child: const Icon(Icons.arrow_back, color: Colors.red),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text('Discover', style: AppTextStyles.title(28)),
+                        const SizedBox(height: 4),
+                        const Text(
+                          'Chicago, Il',
+                          style: TextStyle(color: Colors.black54),
+                        ),
+                      ],
+                    ),
+                    Container(
+                      width: 58,
+                      height: 58,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.black12),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            builder: (context) => const FiltersScreen(),
+                          );
+                        },
+                        child: const Icon(Icons.tune, color: Colors.red),
+                      ),
                     ),
                   ],
                 ),
@@ -201,18 +240,29 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _bigHeart() {
-    return Container(
-      width: 120,
-      height: 120,
-      decoration: BoxDecoration(
-        color: AppColors.primary,
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(color: AppColors.primary.withOpacity(0.3), blurRadius: 24),
-        ],
-      ),
-      child: const Center(
-        child: Icon(Icons.favorite, color: Colors.white, size: 48),
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const MatchScreen()),
+        );
+      },
+      child: Container(
+        width: 120,
+        height: 120,
+        decoration: BoxDecoration(
+          color: AppColors.primary,
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.primary.withValues(alpha: 0.3),
+              blurRadius: 24,
+            ),
+          ],
+        ),
+        child: const Center(
+          child: Icon(Icons.favorite, color: Colors.white, size: 48),
+        ),
       ),
     );
   }

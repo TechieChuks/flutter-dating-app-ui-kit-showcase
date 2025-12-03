@@ -9,12 +9,12 @@ class NumericKeypad extends StatelessWidget {
   final Widget? backspaceIcon;
 
   const NumericKeypad({
-    Key? key,
+    super.key,
     required this.onKeyTap,
     this.spacing = 28,
     this.buttonSize = 72,
     this.backspaceIcon,
-  }) : super(key: key);
+  });
 
   Widget _buildKey(BuildContext ctx, String label) {
     return InkWell(

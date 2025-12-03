@@ -8,12 +8,12 @@ class OtpBox extends StatelessWidget {
   final double size;
 
   const OtpBox({
-    Key? key,
+    super.key,
     required this.digit,
     this.filled = false,
     this.focused = false,
     this.size = 52,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
