@@ -3,7 +3,7 @@ import 'package:datingapp/screens/favourites_match_Screen/messges_screen/message
 import 'package:datingapp/screens/filter_screen/filter_screen.dart';
 
 import 'package:datingapp/screens/home_screen/model/user_card_model.dart';
-import 'package:datingapp/screens/home_screen/profile_screen.dart';
+import 'package:datingapp/screens/home_screen/profile_account_screen/profile_screen.dart';
 import 'package:datingapp/screens/matchscreen/matchscreen.dart';
 
 import 'package:flutter/material.dart';
@@ -214,7 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 2:
         return const MessagesScreen();
       case 3:
-        return const ProfileDetailScreen();
+        return ProfileScreen();
       default:
         return const SizedBox.shrink();
     }
