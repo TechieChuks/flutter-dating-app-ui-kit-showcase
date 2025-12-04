@@ -7,7 +7,7 @@ import '../../theme/app_text_styles.dart';
 class MatchCard extends StatelessWidget {
   final MatchUser user;
 
-  const MatchCard({Key? key, required this.user}) : super(key: key);
+  const MatchCard({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {

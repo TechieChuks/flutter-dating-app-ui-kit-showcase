@@ -4,7 +4,7 @@ import 'package:datingapp/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class MessagesScreen extends StatelessWidget {
-  const MessagesScreen({Key? key}) : super(key: key);
+  const MessagesScreen({super.key});
 
   final List<Map<String, dynamic>> activities = const [
     {"name": "You", "img": "assets/images/p1.jpg"},
@@ -169,12 +169,27 @@ class MessagesScreen extends StatelessWidget {
 
   Widget _buildMessageTile(BuildContext context, Map msg) {
     return InkWell(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => ChatScreen(name: msg["name"], img: msg["img"]),
-        ),
-      ),
+      // onTap: () => Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (_) => ChatScreen(name: msg["name"], img: msg["img"]),
+      //   ),
+      // ),
+      onTap: () {
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          useRootNavigator: true,
+          builder: (context) => DraggableScrollableSheet(
+            initialChildSize: 0.92,
+            minChildSize: 0.70,
+            maxChildSize: 0.98,
+            builder: (_, controller) =>
+                ChatSheet(name: msg["name"], img: msg["img"]),
+          ),
+        );
+      },
       child: Column(
         children: [
           Row(

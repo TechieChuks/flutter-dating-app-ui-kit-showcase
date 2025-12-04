@@ -6,7 +6,7 @@ import '../../theme/app_colors.dart';
 import '../../theme/app_text_styles.dart';
 
 class FavMatchesScreen extends StatelessWidget {
-  const FavMatchesScreen({Key? key}) : super(key: key);
+  const FavMatchesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
